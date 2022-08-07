@@ -16,6 +16,8 @@ let translateToEnglish = ()=>{
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
+        console.log("heeere");
+        console.log(xhttp.responseText);
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("translated_text").innerHTML = xhttp.responseText;
         }
